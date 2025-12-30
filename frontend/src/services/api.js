@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://live-incident-app-y6ug-izyzzs65t-prachis-projects-225511f3.vercel.app/api"; // Change to your backend URL
+const API_URL = "http://localhost:5000/api"; // Change to your backend URL
 
 // modified create-incident-------------------
 export const createIncident = async (data) => {
