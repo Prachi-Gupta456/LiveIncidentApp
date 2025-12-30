@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: "https://live-incident-app.vercel.app",
+    origin: "http://localhost:5173",
     credentials: true
 }))
 
@@ -39,7 +39,7 @@ async function getReadableAddress(lat, lng) {
     }
 }
 
-app.get("/api/reverse-geocode", async (req, resp) => {
+app.get("/reverse-geocode", async (req, resp) => {
 
     try {
         const { lat, lng } = req.query;
@@ -57,7 +57,7 @@ app.get("/api/reverse-geocode", async (req, resp) => {
 
 })
 
-app.post("/api/create-incident", upload.single("media"), async (req, resp) => {
+app.post("/create-incident", upload.single("media"), async (req, resp) => {
 
 
     try {
@@ -123,7 +123,7 @@ app.post("/api/create-incident", upload.single("media"), async (req, resp) => {
     }
 })
 
-app.get("/api/incidents", async (req, resp) => {
+app.get("/incidents", async (req, resp) => {
     try {
         let result = await collection.find().toArray()
 
@@ -141,7 +141,7 @@ app.get("/api/incidents", async (req, resp) => {
     }
 })
 
-app.get("/api/incidents/:id", async (req, resp) => {
+app.get("/incidents/:id", async (req, resp) => {
     try {
         const id = req.params.id
         let result = await collection.findOne({ _id: new ObjectId(id) })
@@ -160,7 +160,7 @@ app.get("/api/incidents/:id", async (req, resp) => {
     }
 })
 
-app.patch("/api/incidents/:id/status", async (req, resp) => {
+app.patch("/incidents/:id/status", async (req, resp) => {
     const id = req.params.id;
     const { status, notes } = req.body
 
@@ -187,7 +187,7 @@ app.patch("/api/incidents/:id/status", async (req, resp) => {
 
 })
 
-app.patch("/api/incidents/:id/confirm", async (req, resp) => {
+app.patch("/incidents/:id/confirm", async (req, resp) => {
     const id = req.params.id;
     try {
 
@@ -208,6 +208,10 @@ app.patch("/api/incidents/:id/confirm", async (req, resp) => {
             msg: error.message
         })
     }
+})
+
+app.get("/",(req,resp) => {
+    resp.send("Server is listening...")
 })
 
 app.listen(process.env.PORT || 5000,() => console.log("server is listening..."));
