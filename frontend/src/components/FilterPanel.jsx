@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../Styles/FilterPanel.css'
+import '../Styles/filterPanel.css'
 
 const FilterPanel = ({ onFilter }) => {
 

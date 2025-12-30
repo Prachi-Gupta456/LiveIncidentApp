@@ -54,7 +54,7 @@ return (
     <br></br>
 
     { incident.mediaType == "image" ?<img src = {incident.mediaURL} style={{"minHeight": "400px", "maxWidth":"89%",
-    "backgroundSize": "cover", "backgroundRepeat": "no-repeat" }}></img>:  <video style = {{"minWidth":"325px"}} controls>
+    "backgroundSize": "cover", "backgroundRepeat": "no-repeat" }}></img>:  <video style = {{"marginTop":"5px","width":"85%","height":"300px"}} controls>
       <source
         src={incident.mediaURL}
         type="video/mp4"
