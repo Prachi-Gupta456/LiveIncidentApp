@@ -1,0 +1,112 @@
+/* Page container */
+.admin-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Page heading */
+.admin-page h1 {
+  text-align: center;
+  color: #34d32f; /* Emergency red for admin dashboard */
+  margin-bottom: 30px;
+}
+
+/* Filter panel spacing */
+.admin-page .filter-panel {
+  margin-bottom: 20px;
+}
+
+/* Incident card */
+.admin-page .incident-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.admin-page .incident-card:hover {
+  transform: scale(1.01);
+}
+
+/* Incident title */
+.admin-page .incident-card h3 {
+  margin-top: 0;
+  color: #3219d2; /* Blue for type */
+}
+
+/* Incident description & details */
+.admin-page .incident-card p {
+  margin: 5px 0;
+  line-height: 1.4;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Status section */
+.admin-page .incident-card .status-section {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.admin-page label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #444;
+}
+
+/* Select and textarea */
+.admin-page select,
+.admin-page textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+}
+.admin-page textarea{
+  height:3rem;
+  padding: 5px;
+  font-size : 16px;
+  font-weight:500;
+  width : 97%;
+}
+
+/* Button */
+.admin-page button {
+  padding: 10px 15px;
+  background-color: #3a2fd3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+.admin-page button:hover {
+  background-color: #211cb7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .admin-page {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .admin-page .incident-card {
+    padding: 10px;
+  }
+}

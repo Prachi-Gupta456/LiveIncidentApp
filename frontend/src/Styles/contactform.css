@@ -1,0 +1,72 @@
+/* Form container */
+form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  place-self: center;    /*updated css*/
+
+}
+
+/* Heading */
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Label */
+form label {
+  font-weight: 600;
+  color: #555;
+
+  
+}
+
+/* Input fields */
+form input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+
+  place-self: center;  /*updated css*/
+}
+
+/* Input focus effect */
+form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+  form {
+    margin: 20px;
+    padding: 20px;
+  }
+}

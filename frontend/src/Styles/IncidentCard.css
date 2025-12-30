@@ -1,0 +1,94 @@
+/* Card container */
+.incident {
+  background-color: #ffffff; /* White card background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  margin: 15px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Make entire card clickable */
+.incident a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 20px;
+}
+
+/* Hover effect for card */
+.incident:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Incident type heading */
+.incident .h {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Description text */
+.incident p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Severity text */
+.severity-low {
+  color: green;
+  font-weight: 600;
+}
+
+.severity-medium {
+  color: orange;
+  font-weight: 600;
+}
+
+.severity-high {
+  color: red;
+  font-weight: 600;
+}
+
+/* Status badge styling */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 8px;
+}
+
+/* Status colors */
+.status-open {
+  background-color: #4caf50; /* green */
+}
+
+.status-in-progress {
+  background-color: #2196f3; /* blue */
+}
+
+.status-closed {
+  background-color: #f44336; /* red */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .incident a {
+    padding: 15px;
+  }
+
+  .incident .h {
+    font-size: 18px;
+  }
+
+  .incident p {
+    font-size: 13px;
+  }
+  
+}

@@ -1,0 +1,53 @@
+/* Page container */
+.feed-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  
+}
+
+/* Heading */
+.feed-page h1 {
+  text-align:center;
+  color: #d21922;
+  margin-bottom: 30px;
+  place-self: center;
+
+}
+
+/* Top container: Filter + Map side by side */
+.feed-page .top-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* For mobile responsiveness */
+}
+
+/* Filter panel styling */
+.feed-page .filter-panel-container {
+  flex: 1;
+  min-width: 250px;
+}
+
+
+/* Incident list styling */
+.feed-page .incident-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .feed-page .top-container {
+    flex-direction: column;
+  }
+
+  .feed-page .filter-panel-container {
+    width: 100%;
+  }
+
+}

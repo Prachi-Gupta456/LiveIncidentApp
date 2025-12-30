@@ -1,0 +1,107 @@
+/* Form container */
+.form {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+/* Form heading */
+.form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Labels */
+.form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Input, select, textarea styles */
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="file"],
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Focus state */
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+/* Textarea specific */
+.form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit button */
+.form button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for button */
+.form button:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
+}
+
+/* Success message */
+.form p {
+  margin-top: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: green;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .form {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .form h2 {
+    font-size: 20px;
+  }
+
+  .form input,
+  .form select,
+  .form textarea {
+    font-size: 13px;
+  }
+
+  .form button {
+    font-size: 14px;
+  }
+}
